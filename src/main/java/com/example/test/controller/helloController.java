@@ -111,4 +111,43 @@ public class helloController {
         return ret;
     }
 
+
+    @RequestMapping(value = "/level")
+    @ResponseBody
+    public Map<String, Object> getMap2() {
+        Map<String, Object> fin = new HashMap<>();
+        fin.put("sql", 1);
+        fin.put("xss", 2);
+        return fin;
+    }
+
+    @RequestMapping(value = "/loginfo")
+    @ResponseBody
+    public Map<String, Object>[] getLog() {
+        Map<String, Object> fin = new HashMap<>();
+        fin.put("code", 0);
+        fin.put("msg", "");
+
+        Map<String, Object>[] ret = new Map[1];
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("id", 1);
+        map.put("created", "2021-02-03 11:11:11");
+        map.put("content", "*");
+        ret[0] = map;
+
+
+        fin.put("data", ret);
+        fin.put("count", ret.length);
+        return ret;
+    }
+
+    @RequestMapping(value = "/rule/userdefine")
+    @ResponseBody
+    public Map<String, Object> getMap3() {
+        Map<String, Object> fin = new HashMap<>();
+        fin.put("UserDefine", "Off");
+        return fin;
+    }
+
 }
