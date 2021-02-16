@@ -76,7 +76,7 @@ public class helloController {
         map.put("reg_expr", "*");
         map.put("reg_expr_name", "*");
         map.put("is_default", 0);
-        map.put("jump", "drop");
+        map.put("jump", "accept");
         map.put("local_level", 1);
         map.put("global_level", 2);
         map.put("note", "");
@@ -87,8 +87,8 @@ public class helloController {
         map.put("url", "http://blog.itcodai.com");
         map.put("reg_expr", "*");
         map.put("reg_expr_name", "*");
-        map.put("is_default", 0);
-        map.put("jump", "drop");
+        map.put("is_default", 1);
+        map.put("jump", "accept");
         map.put("local_level", 1);
         map.put("global_level", 2);
         map.put("note", "");
@@ -117,7 +117,7 @@ public class helloController {
     public Map<String, Object> getMap2() {
         Map<String, Object> fin = new HashMap<>();
         fin.put("sql", 1);
-        fin.put("xss", 2);
+        fin.put("xss", null);
         return fin;
     }
 
@@ -128,13 +128,101 @@ public class helloController {
         fin.put("code", 0);
         fin.put("msg", "");
 
-        Map<String, Object>[] ret = new Map[1];
+        Map<String, Object>[] ret = new Map[15];
 
         Map<String, Object> map = new HashMap<>();
         map.put("id", 1);
-        map.put("created", "2021-02-03 11:11:11");
-        map.put("content", "*");
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
         ret[0] = map;
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[1] = map;
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[2] = map;
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[3] = map;
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[4] = map;
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[5] = map;
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[6] = map;
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[7] = map;
+
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[8] = map;
+
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[9] = map;
+
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[10] = map;
+
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[11] = map;
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[12] = map;
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[13] = map;
+
+        map = new HashMap<>();
+        map.put("id", 1);
+        map.put("time", "2017-11-27T03:16:03.944Z");
+        map.put("full_content", "*");
+        ret[14] = map;
 
 
         fin.put("data", ret);
@@ -148,6 +236,43 @@ public class helloController {
         Map<String, Object> fin = new HashMap<>();
         fin.put("UserDefine", "Off");
         return fin;
+    }
+
+    @RequestMapping(value = "/rule/delete/1")
+    @ResponseBody
+    public String getMap4() {
+        return "";
+    }
+
+    @RequestMapping(value = "/rule/update/1")
+    @ResponseBody
+    public String getMap5() {
+        return "";
+    }
+
+    @RequestMapping(value = "/rule/update")
+    @ResponseBody
+    public String getMap6() {
+        return "";
+    }
+
+    @RequestMapping(value = "/rule/switchuserdefine")
+    @ResponseBody
+    public String getMap7() {
+        return "";
+    }
+
+
+    @RequestMapping(value = "/loginfo/delete")
+    @ResponseBody
+    public String getMap8() {
+        return "";
+    }
+
+    @RequestMapping(value = "/reload")
+    @ResponseBody
+    public String getMap9() {
+        return "";
     }
 
 }
